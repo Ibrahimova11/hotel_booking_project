@@ -9,6 +9,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique:true,
+    
   },
   password: {
     type: String,
@@ -19,7 +20,9 @@ const UserSchema = new mongoose.Schema({
     default: false,
    
   },
+},
+ {timestamps:true}
  
-});
+);
 
 export default mongoose.model("User", UserSchema)
