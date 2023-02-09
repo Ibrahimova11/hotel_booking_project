@@ -19,7 +19,7 @@ export const register = async (req, res, next) => {
   }
 };
 
-// //login
+ //login
 export const login = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
@@ -31,8 +31,8 @@ export const login = async (req, res, next) => {
     );
     if (!isPasswordCorrect)
       return next(createError(400, "Wrong password or username"));
-
-    res.status(200).json(user);
+const {password, isAdmin, ...otherDetails}=user._doc;
+    res.status(200).json({...otherDetails});
   } catch (err) {
     next(err);
   }
