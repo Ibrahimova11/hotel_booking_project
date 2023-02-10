@@ -6,12 +6,14 @@ import {
 import Home from "./pages/Home";
 import Hotel from "./pages/Hotel";
 import List from "./pages/List";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 function App() {
   return (
     <BrowserRouter>
     <Navbar/>
+    <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/hotels" element={<List/>}/>
