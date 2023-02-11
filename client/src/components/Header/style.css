@@ -51,7 +51,7 @@
     margin-bottom: 20px;
   }
   .header__search{
-    height: 45x;
+    height: 50px;
     background-color: white;
     border:3px solid rgb(194, 194, 11);
     display: flex;
@@ -61,9 +61,9 @@
     border-radius: 5px;
     position: absolute;
     bottom:-30px;
-   width: 800px;
+   width: 1000px;
    max-width: 1024px;
-   margin-left: 80px;
+   
   }
   .header__icon{
     color: lightgrey;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,8 +9,18 @@ import {
   faPlane,
   faTaxi,
 } from "@fortawesome/free-solid-svg-icons";
+import { DateRange } from "react-date-range";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 
 const Index = () => {
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: null,
+      key: "selection",
+    },
+  ]);
   return (
     <div className="header">
       <div className="header__container">
@@ -43,28 +53,34 @@ const Index = () => {
         </p>
         <button className="header__btn">Sign in / Register</button>
         <div className="header__search">
-        <div className="header__search-item">
-          <FontAwesomeIcon icon={faBed} className="header__icon" />
-          <input
-            type="text"
-            placeholder="Where are you going?"
-            className="header__search-input"
-          ></input>
+          <div className="header__search-item">
+            <FontAwesomeIcon icon={faBed} className="header__icon" />
+            <input
+              type="text"
+              placeholder="Where are you going?"
+              className="header__search-input"
+            ></input>
+          </div>
+          <div className="header__search-item">
+            <FontAwesomeIcon icon={faCalendarDays} className="header__icon" />
+            <span className="header__search-text">date to date</span>
+            <DateRange
+              editableDateInputs={true}
+              onChange={(item) => setDate([item.selection])}
+              moveRangeOnFirstSelection={false}
+              ranges={date}
+            />
+          </div>
+          <div className="header__search-item">
+            <FontAwesomeIcon icon={faPerson} className="header__icon" />
+            <span className="header__search-text">
+              2 adults 2 children 1 room
+            </span>
+          </div>
+          <div className="header__search-item">
+            <button className="header__btn">Search</button>
+          </div>
         </div>
-        <div className="header__search-item">
-          <FontAwesomeIcon icon={faCalendarDays} className="header__icon" />
-          <span className="header__search-text">date to date</span>
-        </div>
-        <div className="header__search-item">
-          <FontAwesomeIcon icon={faPerson} className="header__icon" />
-          <span className="header__search-text">
-            2 adults 2 children 1 room
-          </span>
-        </div>
-        <div className="header__search-item">
-          <button className="header__btn">Search</button>
-        </div>
-      </div>
       </div>
     </div>
   );
