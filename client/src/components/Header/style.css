@@ -120,3 +120,7 @@ box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
   cursor: pointer;
   background-color:white ;
 }
+
+.options__counter__button:disabled{
+  cursor:not-allowed;
+}
