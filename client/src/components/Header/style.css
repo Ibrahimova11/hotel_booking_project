@@ -13,7 +13,9 @@
     margin: 20px 0px 100px 0px;
   }
   
- 
+ .header__container.listMode{
+  margin: 20px 0px 0px 0px;
+ }
   
   .header__list {
     display: flex;
@@ -86,8 +88,10 @@
 .date{
   position: absolute;
   top:50px;
+  z-index:2 ;
 }
 .options{
+  z-index:2 ;
 position: absolute;
 top:50px;
 background-color: white;

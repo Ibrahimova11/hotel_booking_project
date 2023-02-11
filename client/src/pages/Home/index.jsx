@@ -1,8 +1,16 @@
 import React from 'react'
-import styled from "./style.module.css"
+import "./style.css"
+import Header  from "../.././components/Header"
+import Featured from "../../components/Featured"
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+    <Header />
+    <div className="home__container">
+    <Featured/>
+    
+    </div>
+    </div>
   )
 }
 
