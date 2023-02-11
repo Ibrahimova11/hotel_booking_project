@@ -108,6 +108,7 @@ const Index = () => {
                 <span className="options__text">Adult</span>
                 <div className="options__counter">
                   <button
+                  disabled={options.adult <=1}
                     class="options__counter__button"
                     onClick={() => handleOption("adult", "d")}
                   >
@@ -126,6 +127,7 @@ const Index = () => {
                 <span class="options__text">Children</span>
                 <div className="options__counter">
                   <button
+                  disabled={options.children <=0}
                     class="options__counter__button"
                     onClick={() => handleOption("children", "d")}
                   >
@@ -144,6 +146,7 @@ const Index = () => {
                 <span class="options__text">Room</span>
                 <div className="options__counter">
                   <button
+                  disabled={options.room <=1}
                     class="options__counter__button"
                     onClick={() => handleOption("room", "d")}
                   >
