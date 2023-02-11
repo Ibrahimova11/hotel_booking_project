@@ -3,6 +3,7 @@
     color: white;
     display: flex;
     justify-content: center;
+    position: relative;
    
   }
   
@@ -49,4 +50,35 @@
   .header__title{
     margin-bottom: 20px;
   }
-  
+  .header__search{
+    height: 45x;
+    background-color: white;
+    border:3px solid rgb(194, 194, 11);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom:-30px;
+   width: 800px;
+   max-width: 1024px;
+   margin-left: 80px;
+  }
+  .header__icon{
+    color: lightgrey;
+
+  }
+  .header__search-item{
+    display: flex;
+    align-items: center;
+    gap:10px;
+  }
+  .header__search-input{
+    border:none;
+    outline: none;
+  }
+.header__search-text{
+  color:lightgrey;
+  cursor:pointer
+}  
