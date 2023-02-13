@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from '../../components/HomeSection/Hero'
 
 const Index = () => {
   return (
-    <div>index</div>
+    <div>
+    <Hero/>
+    </div>
   )
 }
 
