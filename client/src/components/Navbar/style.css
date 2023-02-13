@@ -127,8 +127,31 @@ header {
   
   /*--------header------------*/
 
+  @media screen and (max-width: 768px) {
+    /*--------header--------*/
+    header .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    header .contact {
+      justify-content: center;
+      align-items: center;
+    }
+    header a {
+      font-size: 13px;
+    }
+    header i {
+      font-size: 30px;
+      margin-right: 5px;
+      margin-top: 10px;
+    }
+    /*--------header--------*/
+  }
 
 
 
-  
+
+
+
 
