@@ -100,3 +100,35 @@ nav ul li a {
 
 }
 }
+
+/*--------header------------*/
+header {
+    padding: 40px 0 20px 0;
+    background-color: #fff;
+  }
+  header .box {
+    margin: 0 0 0 30px;
+  }
+  header a {
+    font-size: 13px;
+    color: grey;
+  }
+  header i {
+    font-size: 40px;
+    color: #31b675;
+    margin-right: 15px;
+  }
+  header .text {
+    margin-top: 10px;
+  }
+  header h4 {
+    line-height: 10px;
+  }
+  
+  /*--------header------------*/
+
+
+
+
+  
+
