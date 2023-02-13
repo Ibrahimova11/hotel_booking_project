@@ -69,3 +69,11 @@ button{
     color: white;
     font-size: 30px;
   }
+  textarea,
+input{
+    width: 100%;
+    padding:15px;
+    outline: none;
+    border:none;
+  }
+  
