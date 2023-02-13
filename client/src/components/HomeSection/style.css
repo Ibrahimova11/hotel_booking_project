@@ -59,3 +59,17 @@
   cursor: pointer;
 }
 /*--------form-----------*/
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 65vh;
+  }
+  .slide img {
+    height: 65vh;
+  }
+  .slide-form {
+    left: 5%;
+    top: 32%;
+    width: 90%;
+    height: 55vh;
+  }
+}
