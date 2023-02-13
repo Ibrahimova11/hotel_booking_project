@@ -1,0 +1,54 @@
+.navbar {
+    background: #222222;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 10vh;
+    line-height: 10vh;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    transition: all 0.2s ease-out;
+    margin: 0 30px 0 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-out;
+    opacity: 0.8;
+  }
+  nav ul li a:hover {
+    color: #3cf79d;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .menu-icon{
+    display:none ;
+  }
+  nav i {
+    color:#fff
+  }
+.login-area a{
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: 15px;
+    color: #fff;
+}
+.login-area i{
+margin:0 5px 0 15px;
+font-size: 13px;
+color:#fff
+}
+.login-area button{
+margin-left:20px;
+
+}
+
+  
