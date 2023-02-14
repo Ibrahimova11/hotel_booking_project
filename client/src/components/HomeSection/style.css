@@ -38,7 +38,7 @@
 }
 .slide-form {
   position: absolute;
-  top: 32%;
+  top: 30%;
   left: 10%;
   background-color: rgba(0, 0, 0, 0.7);
   width: 35%;
@@ -48,7 +48,6 @@
 }
 .slide-form input {
   margin-top: 20px;
-  cursor: pointer;
 }
 .slide-form .flex_space input:nth-child(odd) {
   margin-right: 20px;
@@ -56,7 +55,6 @@
 .slide-form .submit {
   background: #31b675;
   color: white;
-  cursor: pointer;
 }
 /*--------form-----------*/
 @media screen and (max-width: 768px) {

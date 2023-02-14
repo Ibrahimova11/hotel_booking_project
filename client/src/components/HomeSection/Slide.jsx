@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import SlideData from '../../api/SlideData'
+import React, { useState } from "react"
+import Data from "../../api/SlideData"
 
-
-const Slide = ({ slides }) => {
+const Home = ({ slides }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
@@ -30,7 +29,7 @@ const Slide = ({ slides }) => {
           </button>
         </div>
 
-        {SlideData.map((slide, index) => {
+        {Data.map((slide, index) => {
           return (
             <div className={index === current ? "slide active" : "slide"} key={index}>
               {index === current && <img src={slide.image} alt='Home Image' />}
@@ -44,8 +43,8 @@ const Slide = ({ slides }) => {
           <h2>Enjoy Your Holiday</h2>
           <span> Search and Book Hotel</span>
 
-          <form action=''>
-            <input type='text' placeholder='Seacrh City' name='' id='' />
+          <form>
+            <input type='text' placeholder='Seacrh City' />
             <div className='flex_space'>
               <input type='date' placeholder='Check In' />
               <input type='date' placeholder='Check Out' />
@@ -63,4 +62,4 @@ const Slide = ({ slides }) => {
   )
 }
 
-export default Slide
+export default Home
