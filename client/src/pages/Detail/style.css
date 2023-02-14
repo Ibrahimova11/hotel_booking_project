@@ -63,3 +63,8 @@
     color: white;
   }
   
+  @media screen and (max-width: 768px) {
+    .single-page .flex {
+      flex-direction: column;
+    }
+  }
