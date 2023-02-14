@@ -1,8 +1,11 @@
 import React from 'react'
-
+import HeadTitle from "../../components/HeadTitle"
 const Index = () => {
   return (
-    <div>index</div>
+   <>
+   <HeadTitle/>
+   
+   </>
   )
 }
 
