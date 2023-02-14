@@ -1,5 +1,6 @@
 import React from "react";
 import AllItem from "../../../pages/Destinations/AllItem";
+import "../../Popular/style.css"
 
 
 
