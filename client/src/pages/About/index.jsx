@@ -1,12 +1,12 @@
 import React from "react"
 import "./style.css"
 import AboutCard from "./AboutCard"
+import Feauter from "../../images/feature-img-1.jpg"
 
-
-const Index = () => {
+const About = () => {
   return (
     <>
-   
+    
 
       <section className='about top'>
         <div className='container'>
@@ -27,7 +27,7 @@ const Index = () => {
             </button>
           </div>
           <div className='row image'>
-            <img src='/images/feature-img-1.jpg' alt='' />
+            <img src={Feauter}alt='' />
             <div className='control-btn'>
               <button className='prev'>
                 <i className='fas fa-play'></i>
@@ -40,4 +40,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default About
