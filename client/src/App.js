@@ -8,6 +8,8 @@ import Gallery from "./pages/Gallery";
 import Destinations from "./pages/Destinations";
 import Detail from "./pages/Detail"
 import Blog from "./pages/Blog";
+import BlogDetail from "./pages/Blog/BlogDetail/BlogDetail.jsx";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/destinations" element={<Destinations/>} />
         <Route path="/detail/:id" element={<Detail/>} />
         <Route path="/blog" element={<Blog/>} />
+        <Route path="/blogdetail/:id" element={<BlogDetail/>} />
       </Routes>
 
       <Footer />

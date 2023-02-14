@@ -40,7 +40,7 @@ const BlogData = [
       date: "January 10, 2022",
       catgeory: "Content Writing",
       title: "Investment Planning",
-      cover: "/images/singlepage/blog-5.jpg",
+      cover: "https://rainbowdesign.in/themes/Stetho/img/blog/blog-5.jpg",
       para: "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.",
       desc: "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
     },
