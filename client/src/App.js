@@ -9,6 +9,7 @@ import Destinations from "./pages/Destinations";
 import Detail from "./pages/Detail"
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/Blog/BlogDetail/BlogDetail.jsx";
+import Testimonial from "./pages/Testimonial";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/detail/:id" element={<Detail/>} />
         <Route path="/blog" element={<Blog/>} />
         <Route path="/blogdetail/:id" element={<BlogDetail/>} />
+        <Route path="/testimonial" element={<Testimonial/>} />
       </Routes>
 
       <Footer />

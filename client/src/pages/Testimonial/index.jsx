@@ -1,8 +1,13 @@
-import React from 'react'
+import React from "react"
+import HeadTitle from "../../components/HeadTitle"
+import AllTestimonial from "./AllTestimonial"
 
 const Index = () => {
   return (
-    <div>index</div>
+    <>
+      <HeadTitle />
+      <AllTestimonial />
+    </>
   )
 }
 
