@@ -2,10 +2,13 @@ import React from "react";
 import "./style.css";
 import AboutCard from "./AboutCard";
 import Feauter from "../../images/feature-img-1.jpg";
+import HeadTitle from "../../components/HeadTitle"
+
 
 const About = () => {
   return (
     <>
+    <HeadTitle/>
       <section className="about top">
         <div className="container">
           <AboutCard />
