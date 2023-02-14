@@ -1,7 +1,51 @@
-.error {
-    height: 50vh;
-  }
-  .error h1 {
-    font-size: 50px;
-    color: crimson;
-  }
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+ *, *:after, *:before {
+	 box-sizing: border-box;
+}
+
+
+ h6 {
+	 color: #e7ebf2;
+	 font-size: 12.5rem;
+	 letter-spacing: 0.1em;
+	 margin: 0.025em 0;
+	 text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, .25);
+	 white-space: nowrap;
+   margin-left: 400px;
+}
+.Error{
+  color: #8c8f94;
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  margin: 0.025em 0;
+  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, .25);
+  white-space: nowrap;
+  margin-left: 300px;
+}
+ @media (max-width: 30rem) {
+	 h6 {
+		 font-size: 8.5rem;
+	}
+}
+ h6 > span {
+	 animation: spooky 2s alternate infinite linear;
+	 color: #528cce;
+	 display: inline-block;
+}
+ h6 {
+	 color: #e7ebf2;
+	 margin-bottom: 0.4em;
+}
+ h6 {
+	 color: #ccc;
+	 margin-top: 0;
+}
+ @keyframes spooky {
+	 from {
+		 transform: translatey(0.15em) scaley(0.95);
+	}
+	 to {
+		 transform: translatey(-0.15em);
+	}
+}
+ 
