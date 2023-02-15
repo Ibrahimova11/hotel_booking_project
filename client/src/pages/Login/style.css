@@ -47,4 +47,9 @@
   .show-data .sign-box {
     margin-top: 50px;
   }
- 
+  /*----------show-data---------*/
+  @media screen and (max-width: 768px) {
+    .sign-box {
+      width: 80%;
+    }
+  }
