@@ -5,6 +5,8 @@ import Hero from '../../components/HomeSection/Hero'
 import HomeAbout from '../../components/HomeSection/HomeAbout'
 import MostPopular from '../../components/Popular/MostPopular'
 import Works from '../../components/HomeSection/Works'
+import Gallery from '../../components/HomeSection/Gallery'
+
 const Index = () => {
   return (
     <div>
@@ -14,6 +16,7 @@ const Index = () => {
     <DestinationHome/>
     <Download/>
     <Works/>
+    <Gallery/>
     </div>
   )
 }
