@@ -10,6 +10,7 @@ import Detail from "./pages/Detail"
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/Blog/BlogDetail/BlogDetail.jsx";
 import Testimonial from "./pages/Testimonial";
+import Contact from "./pages/Contact";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/blog" element={<Blog/>} />
         <Route path="/blogdetail/:id" element={<BlogDetail/>} />
         <Route path="/testimonial" element={<Testimonial/>} />
+        <Route path="/contact" element={<Contact/>} />
       </Routes>
 
       <Footer />

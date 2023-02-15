@@ -1,6 +1,7 @@
 .collection img {
     filter: grayscale(100%);
     transition: 0.5s;
+    cursor:grab;
   }
   .collection img:hover {
     filter: grayscale(0);
