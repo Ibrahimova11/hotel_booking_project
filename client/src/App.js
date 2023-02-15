@@ -11,6 +11,7 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/Blog/BlogDetail/BlogDetail.jsx";
 import Testimonial from "./pages/Testimonial";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/blogdetail/:id" element={<BlogDetail/>} />
         <Route path="/testimonial" element={<Testimonial/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/sign-in" element={<Login/>} />
       </Routes>
 
       <Footer />
