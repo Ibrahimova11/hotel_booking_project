@@ -1,0 +1,30 @@
+.download {
+    background-color: #31b675;
+    background-image: url(https://rainbowdesign.in/themes/Stetho/img/bg/download-app-line.svg);
+    color: white;
+    height: 75vh;
+    padding: 50px 0;
+    overflow: hidden;
+  }
+  .download h1 {
+    font-size: 40px;
+  }
+  .download ul {
+    margin: 20px 0;
+  }
+  .download ul li {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  .download .row img {
+    margin-right: 20px;
+  }
+  .download .row {
+    position: relative;
+  }
+  .download .image {
+    position: absolute;
+    left: 20%;
+    right: 0;
+  }
+ 
