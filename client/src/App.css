@@ -39,11 +39,12 @@ button{
     background-color: #31b675;
     color:#fff;
     font-weight: 400;
-    transition: 05s;
+    
 }
 .primary-btn:hover{
-    background-color: #fff;
+    background-color: black;
     color:white;
+    transition: 1s;
 }
 .secondary-btn {
   padding: 12px 30px;
