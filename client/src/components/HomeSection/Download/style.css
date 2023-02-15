@@ -27,4 +27,21 @@
     left: 20%;
     right: 0;
   }
- 
+  @media screen and (max-width: 768px) {
+    .download .flex_space {
+      flex-direction: column;
+      padding: 40px;
+    }
+    .download .row {
+      width: 100%;
+    }
+    .download .row2 {
+        left: -30%;
+
+    }
+    .download {
+      height: 220vh;
+      
+     
+    }
+  }
