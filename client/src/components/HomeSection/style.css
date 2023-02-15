@@ -47,7 +47,7 @@
   color: white;
 }
 .slide-form input {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .slide-form .flex_space input:nth-child(odd) {
   margin-right: 20px;
@@ -55,6 +55,7 @@
 .slide-form .submit {
   background: #31b675;
   color: white;
+  border: none;
 }
 /*--------form-----------*/
 @media screen and (max-width: 768px) {

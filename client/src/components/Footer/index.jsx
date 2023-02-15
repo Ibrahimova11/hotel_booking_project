@@ -74,8 +74,8 @@ const Index = () => {
             <h2>NEWSLETTER</h2>
             <p>Lorem ipsum dolor sit amet sectetur adipiscing elit amet</p>
 
-            <input type='text' name='' id='' />
-            <input type='text' className='primary-btn' value='SUBSCRIBE' />
+            <input type='text' name='' id='' className='primary-btnn' />
+            <button className="btn">SUBSCRIBE</button>
           </div>
         </div>
       </footer>

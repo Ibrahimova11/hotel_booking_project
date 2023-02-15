@@ -28,6 +28,13 @@ li{
   outline: none;
   cursor: pointer;
 }
+.btn{
+  padding: 20px 100px;
+  background-color: #31b675;
+  color:#fff;
+  font-weight: 400;
+  border-radius: 10px;
+}
 button{
     background-color: none;
     border:none;
@@ -39,10 +46,20 @@ button{
     background-color: #31b675;
     color:#fff;
     font-weight: 400;
+    border-radius: 10px;
     
 }
+.btn:hover{
+  background-color: #38e993;
+}
+.primary-btnn{
+  padding: 20px 20px;
+   color:#fff;
+
+  
+}
 .primary-btn:hover{
-    background-color: black;
+    background-color: #058044;
     color:white;
     transition: 1s;
 }
