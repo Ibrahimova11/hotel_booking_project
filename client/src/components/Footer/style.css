@@ -63,4 +63,8 @@ footer {
   .legal p {
     opacity: 0.5;
   }
-  
+  @media screen and (max-width: 768px) {
+    footer .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
