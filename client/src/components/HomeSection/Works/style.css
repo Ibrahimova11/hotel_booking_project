@@ -18,4 +18,8 @@
   .works p {
     font-size: 14px;
   }
- 
+  @media screen and (max-width: 768px) {
+    .works .grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
