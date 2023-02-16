@@ -61,7 +61,7 @@ import {
               <div className="headerSearch">
                 <div className="headerSearchItem">
                   <FontAwesomeIcon icon={faBed} className="headerIcon" />
-                  <input
+                  <input 
                     type="text"
                     placeholder="Where are you going?"
                     className="headerSearchInput"
