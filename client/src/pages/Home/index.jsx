@@ -7,6 +7,7 @@ import MostPopular from "../../components/Popular/MostPopular";
 import Works from "../../components/HomeSection/Works";
 import Gallery from "../../components/HomeSection/Gallery";
 import Featured from "../../components/Featured";
+import PropertyList from "../../components/PropertyList";
 import "./style.css"
 const Index = () => {
   return (
@@ -14,6 +15,8 @@ const Index = () => {
       <Hero />
       <div className="homeContainer">
         <Featured />
+        <h1 className ="homeTitle">Browse by property type</h1>
+        <PropertyList/>
       </div>
       <HomeAbout />
       <MostPopular />
