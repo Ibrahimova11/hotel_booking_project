@@ -8,6 +8,7 @@ import Works from "../../components/HomeSection/Works";
 import Gallery from "../../components/HomeSection/Gallery";
 import Featured from "../../components/Featured";
 import PropertyList from "../../components/PropertyList";
+import FeaturedProperties from "../../components/FeaturedProperties";
 import "./style.css"
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <h1 className ="homeTitle">Browse by property type</h1>
         <PropertyList/>
         <h1 className ="homeTitle">Homes guests love</h1>
+        <FeaturedProperties/>
       </div>
       <HomeAbout />
       <MostPopular />
