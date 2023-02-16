@@ -21,10 +21,10 @@ const Index = () => {
           </div>
           <div className="listItem">
             <label>Check-in Date</label>
-            <span onClick={()=>setOpenDate(!openDate)}>{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
-              date[0].endDate,
+            <span onClick={() => setOpenDate(!openDate)}>{`${format(
+              date[0].startDate,
               "MM/dd/yyyy"
-            )}`}</span>
+            )} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
             {openDate && (
               <DateRange
                 onChange={(item) => setDate([item.selection])}
@@ -32,6 +32,39 @@ const Index = () => {
                 ranges={date}
               />
             )}
+          </div>
+          <div className="listItem">
+            <label>Options</label>
+            <div className="listOptionItem">
+              <span className="listOptionText">
+                Min price<small>per night</small>
+              </span>
+              <input type="number" className="listOptionInput"/>
+            </div>
+            <div className="listOptionItem">
+              <span className="listOptionText">
+                Max price<small>per night</small>
+              </span>
+              <input type="number" className="listOptionInput"/>
+            </div>
+            <div className="listOptionItem">
+              <span className="listOptionText">
+                Adult
+              </span>
+              <input type="number" min={1} className="listOptionInput" placeholder={options.adult}/>
+            </div>
+            <div className="listOptionItem">
+              <span className="listOptionText">
+               Children
+              </span>
+              <input type="number" min={0} className="listOptionInput" placeholder={options.children}/>
+            </div>
+            <div className="listOptionItem">
+              <span className="listOptionText">
+               Room
+              </span>
+              <input type="number" min={1} className="listOptionInput" placeholder={options.room}/>
+            </div>
           </div>
         </div>
         <div className="listResult"></div>

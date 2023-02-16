@@ -17,6 +17,7 @@ import List from "./pages/List";
 import Hotel from "./pages/Hotels";
 
 
+
 function App() {
   return (
     <BrowserRouter>
