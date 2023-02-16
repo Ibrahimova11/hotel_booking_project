@@ -23,6 +23,11 @@ const Index = () => {
               </Link>
             </li>
             <li>
+              <Link to="/hotels" onClick={closeMobileMenu}>
+                Hotels
+              </Link>
+            </li>
+            <li>
               <Link to="/about" onClick={closeMobileMenu}>
                 About us
               </Link>
@@ -52,6 +57,7 @@ const Index = () => {
                 Contact Us
               </Link>
             </li>
+            
           </ul>
 
           <div className="login-area flex">

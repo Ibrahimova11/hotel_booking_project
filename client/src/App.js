@@ -13,6 +13,8 @@ import Testimonial from "./pages/Testimonial";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import List from "./pages/List";
+import Hotel from "./pages/Hotels";
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
         <Route path="/blogdetail/:id" element={<BlogDetail/>} />
         <Route path="/testimonial" element={<Testimonial/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/hotels" element={<List/>}/>
+        <Route path="/hotels/:id" element={<Hotel/>}/>
         <Route path="/sign-in" element={<Login/>} />
         <Route path="/Register" element={<Register/>} />
       </Routes>
