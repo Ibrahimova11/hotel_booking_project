@@ -7,10 +7,12 @@ import SearchItem from "../../components/SearchItem";
 
 const Item = () => {
   const location = useLocation();
-  const [destination, ] = useState(location.state.destination);
-  const [date, setDate] = useState(location.state.date);
+  const [destination, setDestination] = useState(
+    location.state?.destination || null
+  );
+  const [date, setDate] = useState(location.state?.date || null);
   const [openDate, setOpenDate] = useState(false);
-  const [options, ] = useState(location.state.options);
+  const [options, setOptions] = useState(location.state?.options || null);
 
   return (
     <div>
@@ -24,10 +26,14 @@ const Item = () => {
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
-              <span onClick={() => setOpenDate(!openDate)}>{`${format(
-                date[0].startDate,
-                "MM/dd/yyyy"
-              )} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+              <span onClick={() => setOpenDate(!openDate)}>
+                {date &&
+                  date[0] &&
+                  `${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
+                    date[0].endDate,
+                    "MM/dd/yyyy"
+                  )}`}
+              </span>
               {openDate && (
                 <DateRange
                   onChange={(item) => setDate([item.selection])}
@@ -57,7 +63,7 @@ const Item = () => {
                     type="number"
                     min={1}
                     className="lsOptionInput"
-                    placeholder={options.adult}
+                    placeholder={options && options.adult}
                   />
                 </div>
                 <div className="lsOptionItem">
@@ -66,7 +72,7 @@ const Item = () => {
                     type="number"
                     min={0}
                     className="lsOptionInput"
-                    placeholder={options.children}
+                    placeholder={options && options.children}
                   />
                 </div>
                 <div className="lsOptionItem">
@@ -75,7 +81,7 @@ const Item = () => {
                     type="number"
                     min={1}
                     className="lsOptionInput"
-                    placeholder={options.room}
+                    placeholder={options && options.room}
                   />
                 </div>
               </div>
@@ -99,4 +105,4 @@ const Item = () => {
   );
 };
 
-export default  Item;
+export default Item;
