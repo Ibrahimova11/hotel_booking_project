@@ -22,11 +22,7 @@ const Index = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/hotels" onClick={closeMobileMenu}>
-                Hotels
-              </Link>
-            </li>
+            
             <li>
               <Link to="/about" onClick={closeMobileMenu}>
                 About us
