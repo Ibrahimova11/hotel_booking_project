@@ -51,6 +51,7 @@ const Hotel = () => {
   };
 
   return (
+    
     <div>
       <div className="hotelContainer">
         {open && (
