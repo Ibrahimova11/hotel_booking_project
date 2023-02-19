@@ -24,7 +24,7 @@ const List = () => {
   
   const handleClick=()=>{
   reFetch()
-  }
+  };
   
 
 
