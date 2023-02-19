@@ -20,8 +20,6 @@ const Hotel = () => {
     `http://localhost:8080/api/hotels/find/${id}`
   );
 
-  
-
   const handleOpen = (i) => {
     setSlideNumber(i);
     setOpen(true);
