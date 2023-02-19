@@ -1,6 +1,9 @@
+import useFetch from "../../hooks/useFetch";
 import "./style.css";
 
 const Index = () => {
+
+  const { data, loading, error } = useFetch("http://localhost:8080/api/hotels/countByType");
   return (
     <div className="fp">
       <div className="fpItem">

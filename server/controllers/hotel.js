@@ -39,9 +39,18 @@ export const getHotel = async (req, res, next) => {
     next(err);
   }
 };
+
+
 export const getHotels = async (req, res, next) => {
+  const { min, max, ...others } = req.query;
   try {
-    const hotels = await Hotel.find();
+    const hotels = await Hotel.find({
+      ...others,
+      cheapestPrice: { $gte: min || 1, $lte: max || 999 },
+    }).limit(req.query.limit);
+    if (hotels.length === 0) {
+      return res.status(404).json({ message: 'No hotels found with the given parameters.' });
+    }
     res.status(200).json(hotels);
   } catch (err) {
     next(err);
