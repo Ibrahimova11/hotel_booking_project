@@ -1,74 +1,60 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import HeadTitle from "../../components/HeadTitle"
-import "./style.css"
+import axios from "axios";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import "./style.css";
 
-const Index = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+const Login = () => {
+  const [credentials, setCredentials] = useState({
+    username: undefined,
+    password: undefined,
+  });
 
-  const [recValue, setRecValue] = useState([])
-  const submitForm = (e) => {
-    e.preventDefault()
-    const newValue = { email: email, password: password }
+  const { loading, error, dispatch } = useContext(AuthContext);
 
-    setRecValue([...recValue, newValue])
-    console.log(newValue)
+  const navigate = useNavigate()
 
-    setEmail("")
-    setPassword("")
-  }
+  const handleChange = (e) => {
+    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axios.post("/auth/login", credentials);
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+      navigate("/")
+    } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+    }
+  };
+
+
   return (
-    <>
-      <HeadTitle />
-      <section className='forms top'>
-        <div className='container'>
-          <div className='sign-box'>
-            <p>Enter your e-mail and password below to log in to your account and use the benefits of our website.</p>
-            <form action='' onSubmit={submitForm}>
-              <input type='text' name='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' />
-              <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
+    <div className="login">
+      <div className="lContainer">
+        <input
+          type="text"
+          placeholder="username"
+          id="username"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <input
+          type="password"
+          placeholder="password"
+          id="password"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <button disabled={loading} onClick={handleClick} className="lButton">
+          Login
+        </button>
+        {error && <span>{error.message}</span>}
+      </div>
+    </div>
+  );
+};
 
-              <div className='flex_space'>
-                <div className='flex'>
-                  <input type='checkbox' />
-                  <label>Remember Me</label>
-                </div>
-                <div className='flex'>
-                  <span>I forgot my password</span>
-                </div>
-              </div>
-
-              <button type='submit' className='primary-btn'>
-                Sign In
-              </button>
-              <p>
-                Don't have account? <Link to='/register'>Sign up!</Link>
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section className='show-data'>
-        {recValue.map((cureentValue) => {
-          return (
-            <>
-              <div className='sign-box'>
-                <h1>Sign-In Successfully</h1>
-                <h3>
-                  Email : <p>{cureentValue.email}</p>
-                </h3>
-                <h3>
-                  Password : <p>{cureentValue.password}</p>
-                </h3>
-              </div>
-            </>
-          )
-        })}
-      </section>
-    </>
-  )
-}
-
-export default Index
+export default Login;
