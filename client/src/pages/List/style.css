@@ -59,7 +59,7 @@
   .lsOptionItem{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     color: #2c2b2b;
     font-size: 14px;
   }
@@ -68,7 +68,8 @@
     font-weight: 800;
   }
   .lsOptionInput{
-    width: 50px;
+    width: 70px;
+height: 33px;
   }
   
   .listSearch>button{
