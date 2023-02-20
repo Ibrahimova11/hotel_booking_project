@@ -10,6 +10,8 @@ import { useContext, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { useLocation, useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
+import { AuthContext } from "../../context/AuthContext";
+import Reserve from "../../components/Reserve";
 const Hotel = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
@@ -143,6 +145,8 @@ const Hotel = () => {
           </div>
         </div>
       )}
+
+      {openModal && <Reserve setOpen={setOpenModal} hotelId={id} /> }
     </div>
   );
 };
