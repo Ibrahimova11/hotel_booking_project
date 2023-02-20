@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import Logo from "../../images/logo.png";
+import { AuthContext } from "../../context/AuthContext";
 
 const Index = () => {
+  const { user } = useContext(AuthContext);
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -55,23 +57,25 @@ const Index = () => {
             </li>
           </ul>
 
-          <div className="login-area flex">
-            <li>
-              <Link to="/sign-in">
-                <i class="fa-solid fa-chevron-right"></i>Sign in
-              </Link>
-            </li>
-            <li>
-              <Link to="/register">
-                <i class="fa-solid fa-chevron-right"></i>Register
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact">
-                <button className="primary-btn">Request a Quote</button>
-              </Link>
-            </li>
-          </div>
+          {user ? user.username : (
+            <div className="login-area flex">
+              <li>
+                <Link to="/sign-in">
+                  <i class="fa-solid fa-chevron-right"></i>Sign in
+                </Link>
+              </li>
+              <li>
+                <Link to="/register">
+                  <i class="fa-solid fa-chevron-right"></i>Register
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  <button className="primary-btn">Request a Quote</button>
+                </Link>
+              </li>
+            </div>
+          )}
         </div>
       </nav>
       <header>
