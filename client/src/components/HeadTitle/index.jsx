@@ -9,7 +9,7 @@ const Index = () => {
       <section className="image-heading">
         <div className="container">
         
-          <h1>{location.pathname.split("/")[1]}</h1> {/*<h1>{location.pathname.replace(/ /, "")}</h1>*/}
+          <h1>{location.pathname.split("/")[1]}</h1> 
 
           <button>
             <Link to="/"> Home / </Link>
