@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import HeadTitle from "../../components/HeadTitle"
+import HeadTitle from "../../components/HeadTitle";
 import "./style.css";
 
 const Login = () => {

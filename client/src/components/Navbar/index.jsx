@@ -4,6 +4,7 @@ import "./style.css";
 import Logo from "../../images/logo.png";
 
 const Index = () => {
+  
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
