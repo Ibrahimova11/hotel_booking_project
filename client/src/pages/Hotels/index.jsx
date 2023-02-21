@@ -59,11 +59,7 @@ const Hotel = () => {
   };
 
   const handleClick = () => {
-    if (user) {
-      setOpenModal(true);
-    } else {
-      navigate("/sign-in");
-    }
+    setOpenModal(true);
   };
 
   return (
@@ -149,7 +145,6 @@ const Hotel = () => {
       {openModal && <Reserve setOpen={setOpenModal} hotelId={id} /> }
    
     </div>
-    
   );
 };
 
