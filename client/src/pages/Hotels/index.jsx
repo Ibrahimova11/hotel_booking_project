@@ -1,4 +1,4 @@
-import "../Hotels/style.css";
+import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -145,9 +145,11 @@ const Hotel = () => {
           </div>
         </div>
       )}
-
+      
       {openModal && <Reserve setOpen={setOpenModal} hotelId={id} /> }
+   
     </div>
+    
   );
 };
 
