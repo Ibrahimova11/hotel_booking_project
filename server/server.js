@@ -7,6 +7,7 @@ import usersRoute from "./routes/users.js"
 import hotelsRoute from "./routes/hotels.js"
 import roomsRoute from "./routes/rooms.js"
 import cors from "cors";
+import User from "./models/User.js";
 const app = express();
 dotenv.config();
 mongoose.set("strictQuery", false);

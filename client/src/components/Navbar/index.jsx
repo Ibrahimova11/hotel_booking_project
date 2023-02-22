@@ -1,15 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import Logo from "../../images/logo.png";
 import { AuthContext } from "../../context/AuthContext";
+import axios from "axios";
 
 const Index = () => {
   const { user } = useContext(AuthContext);
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  
   return (
     <>
       <nav className="navbar">
@@ -57,7 +59,9 @@ const Index = () => {
             </li>
           </ul>
 
-          {user ? user.username : (
+          {user ? (
+            user.username
+          ) : (
             <div className="login-area flex">
               <li>
                 <Link to="/sign-in">
