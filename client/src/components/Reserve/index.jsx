@@ -59,12 +59,14 @@ const Reserve = ({ setOpen, hotelId }) => {
             dates: alldates,
           });
           return res.data;
+          console.log("RESDATA",res.data);
         })
       );
       setOpen(false);
       navigate("/");
     } catch (err) {}
   };
+  console.log('data:' + data);
   return (
     <div className="reserve">
       <div className="rContainer">
