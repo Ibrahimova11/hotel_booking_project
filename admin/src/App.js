@@ -3,22 +3,38 @@ import Login from "./pages/Login";
 import List from "./pages/List";
 import Single from "./pages/Single";
 import New from "./pages/New";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.css";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { AuthContext, AuthProvider } from "./context/AuthContext.js";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
+  const ProtectedRoute = ({ children }) => {
+    const { user } = useContext(AuthContext);
 
+    if (!user) {
+      return <Navigate to="/login" />;
+    }
+    return children;
+  };
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
+      <AuthProvider>
         <Routes>
           <Route path="/">
-            <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
+            <Route
+              index
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
             <Route path="users">
               <Route index element={<List />} />
               <Route path=":userId" element={<Single />} />
@@ -37,6 +53,7 @@ function App() {
             </Route>
           </Route>
         </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </div>
   );
