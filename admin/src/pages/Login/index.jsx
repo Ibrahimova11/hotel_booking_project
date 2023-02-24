@@ -1,10 +1,11 @@
 import axios from "axios";
+import "./style.css"
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 // import { AuthContext } from "../../context/AuthContext";
 
-import "./style.css";
+
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -46,55 +47,28 @@ const Login = () => {
   return (
     <>
       
-      <section className="forms top">
-        <div className="container">
-          <div className="sign-box">
-            <p>
-              Enter your e-mail and password below to log in to your account and
-              use the benefits of our website.
-            </p>
-            <form action="">
-              <input
-                type="text"
-                placeholder="username"
-                id="username"
-                onChange={handleChange}
-                className="lInput"
-              />
-              <input
-                type="password"
-                placeholder="password"
-                id="password"
-                onChange={handleChange}
-                className="lInput"
-              />
-
-              <div className="flex_space">
-                <div className="flex">
-                  <input type="checkbox" />
-                  <label>Remember Me</label>
-                </div>
-                <div className="flex">
-                  <span>I forgot my password</span>
-                </div>
-              </div>
-
-              <button
-                disabled={loading}
-                onClick={handleClick}
-                type="submit"
-                className="primary-btn"
-              >
-                Sign In
-              </button>
-              {error && <span>{error.message}</span>}
-              <p>
-                Don't have account? <Link to="/register">Signup!</Link>
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
+      <div className="login">
+      <div className="lContainer">
+        <input
+          type="text"
+          placeholder="username"
+          id="username"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <input
+          type="password"
+          placeholder="password"
+          id="password"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <button disabled={loading} onClick={handleClick} className="lButton">
+          Login
+        </button>
+        {error && <span>{error.message}</span>}
+      </div>
+    </div>
     </>
   );
 };
