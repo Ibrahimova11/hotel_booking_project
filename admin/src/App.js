@@ -23,36 +23,61 @@ function App() {
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
-      <AuthProvider>
-        <Routes>
-          <Route path="/">
-            <Route path="login" element={<Login />} />
-            <Route
-              index
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="users">
-              <Route index element={<List />} />
-              <Route path=":userId" element={<Single />} />
+        <AuthProvider>
+          <Routes>
+            <Route path="/">
+              <Route path="login" element={<Login />} />
               <Route
-                path="new"
-                element={<New inputs={userInputs} title="Add New User" />}
+                index
+                element={
+                  <ProtectedRoute>
+                    <Home />
+                  </ProtectedRoute>
+                }
               />
+              <Route path="users">
+                <Route
+                  index
+                  element={
+                    <ProtectedRoute>
+                      <List />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path=":userId"
+                  element={
+                    <ProtectedRoute>
+                      <Single />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="new"
+                  element={<ProtectedRoute><New inputs={userInputs} title="Add New User" /></ProtectedRoute>}
+                />
+              </Route>
+              <Route path="products">
+                <Route index element={<List />} />
+                <Route
+                  path=":productId"
+                  element={
+                    <ProtectedRoute>
+                      <Single />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="new"
+                  element={
+                    <ProtectedRoute>
+                      <New inputs={productInputs} title="Add New Product" />{" "}
+                    </ProtectedRoute>
+                  }
+                />
+              </Route>
             </Route>
-            <Route path="products">
-              <Route index element={<List />} />
-              <Route path=":productId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={productInputs} title="Add New Product" />}
-              />
-            </Route>
-          </Route>
-        </Routes>
+          </Routes>
         </AuthProvider>
       </BrowserRouter>
     </div>
