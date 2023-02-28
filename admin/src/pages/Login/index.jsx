@@ -26,7 +26,7 @@ const Login = () => {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/auth/login",
+        "/auth/login",
         credentials
       );
       if(res.data.isAdmin){
