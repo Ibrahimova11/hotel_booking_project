@@ -17,13 +17,14 @@ const New = ({ inputs, title }) => {
     e.preventDefault();
     const data = new FormData();
     data.append("file", file);
-    data.append("upload_preset", "upload");
+    data.append("upload_preset", "hotell");
     try {
       const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/Susanibar/image/upload",
+        "https://api.cloudinary.com/v1_1/du5pjcp4i/image/upload",
         data
       );
-
+      console.log(uploadRes.data);
+          
       const { url } = uploadRes.data;
 
       const newUser = {
@@ -31,7 +32,7 @@ const New = ({ inputs, title }) => {
         img: url,
       };
 
-      await axios.post("/auth/register", newUser);
+      await axios.post("http://localhost:8080/api/auth/register", newUser);
     } catch (err) {
       console.log(err);
     }

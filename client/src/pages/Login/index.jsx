@@ -60,15 +60,7 @@ const Login = () => {
                 className="lInput"
               />
 
-              <div className="flex_space">
-                <div className="flex">
-                  <input type="checkbox" />
-                  <label>Remember Me</label>
-                </div>
-                <div className="flex">
-                  <span>I forgot my password</span>
-                </div>
-              </div>
+            
 
               <button
                 disabled={loading}
